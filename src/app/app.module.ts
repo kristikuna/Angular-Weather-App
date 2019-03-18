@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { WeatherComponent } from './weather/weather.component';
+import { WeatherThumbnailComponent } from './weather/weather-thumbnail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    WeatherComponent
+    WeatherComponent,
+    WeatherThumbnailComponent
   ],
   imports: [
     BrowserModule,
