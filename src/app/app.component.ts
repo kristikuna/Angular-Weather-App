@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+    <app-nav-bar></app-nav-bar>
+    <app-weather></app-weather>`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
