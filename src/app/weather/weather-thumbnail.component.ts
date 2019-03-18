@@ -3,13 +3,18 @@ import { Component, Input } from '@angular/core'
 @Component({
   selector: 'weather-thumbnail',
   template: `
-   <div class="well hoverwell thumbnail">
-    <h2>{{event.cityName}}, {{event.state}}</h2>
+   <div class="card">
+    <h3>{{event.cityName}}, {{event.state}}</h3>
+    <p>{{event.summary}}</p>
    </div>
   `,
   styles: [`
-    .pad-left { margin-left: 10px; }
-    .well div { color: #bbb; }
+    .card{
+      border-radius: 0%;
+      height: 10rem;
+      margin: 10px;
+      padding: 10px;
+    }
   `]
 })
 export class WeatherThumbnailComponent {
