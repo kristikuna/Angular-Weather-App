@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'tv-weather',
-  templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.css']
+  templateUrl: './weather-container.component.html',
+  styleUrls: ['./weather-container.component.css']
 })
 export class WeatherComponent implements OnInit {
   data1 = {

@@ -14,7 +14,7 @@ import { Component, Input } from '@angular/core'
     </div>
    </div>
   `,
-  styleUrls: ['./weather.component.css']
+  styleUrls: ['./weather-container.component.css']
 })
 export class WeatherThumbnailComponent {
   @Input() data: any
