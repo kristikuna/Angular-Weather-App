@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'tv-weather',
   templateUrl: './weather-container.component.html',
   styleUrls: ['./weather-container.component.css']
 })

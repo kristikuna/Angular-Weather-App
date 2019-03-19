@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'tv-root',
   template: `
     <tv-nav-bar></tv-nav-bar>
-    <tv-weather></tv-weather>`,
+    <router-outlet></router-outlet>
+    `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
