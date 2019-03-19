@@ -10,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
       <weather-thumbnail [event]="event3" class="col-lg-3 col-md-4 col-sm-12"></weather-thumbnail>
       <weather-thumbnail [event]="event4" class="col-lg-3 col-md-4 col-sm-12"></weather-thumbnail>
       <weather-thumbnail [event]="event5" class="col-lg-3 col-md-4 col-sm-12"></weather-thumbnail>
-
     </div>
   </div>
   `,

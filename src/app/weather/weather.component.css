@@ -1,0 +1,23 @@
+.card {
+  background-color: white;
+  min-height: 10em;
+  position: relative;
+  text-align: center;
+  margin: 5px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 5em;
+}
+
+.card-header h5 {
+  margin-bottom: 0px;
+}
+
+.card-content {
+  padding: 10px 10px 25px;
+}
