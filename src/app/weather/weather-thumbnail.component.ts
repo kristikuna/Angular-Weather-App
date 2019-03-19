@@ -5,12 +5,13 @@ import { Component, Input } from '@angular/core'
   template: `
    <div class="card">
     <div class="card-header">
-      <h5>{{data.cityName}}, {{data.stateAB}}</h5>
+      <h5>{{data.name}}</h5>
     </div>
     <div class="card-content">
-      <br />{{data.weatherIcon}}
-      <br />{{data.currentWeather}}
-      <br />{{data.summary}}
+      <br />{{data.main.temp}} &#176;
+      <br />{{data.main.humidity}}
+      <br />{{data.weather.description}}
+      <br />{{data.weather.icon}}
     </div>
    </div>
   `,
