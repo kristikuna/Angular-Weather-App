@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Kristi Byrnes
 Manny Rivera
 Bertram Gage
+Bradford Severance
