@@ -5,17 +5,17 @@ import { Component, Input } from '@angular/core'
   template: `
    <div class="card">
     <div class="card-header">
-      <h5>{{event.cityName}}, {{event.stateAB}}</h5>
+      <h5>{{data.cityName}}, {{data.stateAB}}</h5>
     </div>
     <div class="card-content">
-      <br />{{event.weatherIcon}}
-      <br />{{event.currentWeather}}
-      <br />{{event.summary}}
+      <br />{{data.weatherIcon}}
+      <br />{{data.currentWeather}}
+      <br />{{data.summary}}
     </div>
    </div>
   `,
   styleUrls: ['./weather.component.css']
 })
 export class WeatherThumbnailComponent {
-  @Input() event: any
+  @Input() data: any
 }

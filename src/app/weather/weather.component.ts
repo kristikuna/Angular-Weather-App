@@ -2,21 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-weather',
-  template: `
-  <div class="container">
-    <div class="row">
-      <weather-thumbnail [event]="event1" class="col-lg-3 col-md-4 col-sm-12"></weather-thumbnail>
-      <weather-thumbnail [event]="event2" class="col-lg-3 col-md-4 col-sm-12"></weather-thumbnail>
-      <weather-thumbnail [event]="event3" class="col-lg-3 col-md-4 col-sm-12"></weather-thumbnail>
-      <weather-thumbnail [event]="event4" class="col-lg-3 col-md-4 col-sm-12"></weather-thumbnail>
-      <weather-thumbnail [event]="event5" class="col-lg-3 col-md-4 col-sm-12"></weather-thumbnail>
-    </div>
-  </div>
-  `,
+  templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.css']
 })
 export class WeatherComponent implements OnInit {
-  event1 = {
+  data1 = {
     id: 1,
     cityName: "Detroit",
     state: "Michigan",
@@ -25,7 +15,7 @@ export class WeatherComponent implements OnInit {
     currentWeather: "weather",
     summary: "summary for city"
   }
-  event2 = {
+  data2 = {
     id: 2,
     cityName: "New York City",
     state: "New York",
@@ -34,7 +24,7 @@ export class WeatherComponent implements OnInit {
     currentWeather: "weather",
     summary: "summary for city"
   }
-  event3 = {
+  data3 = {
     id: 3,
     cityName: "Chicago",
     state: "Illinois",
@@ -43,7 +33,7 @@ export class WeatherComponent implements OnInit {
     currentWeather: "weather",
     summary: "summary for city"
   }
-  event4 = {
+  data4 = {
     id: 4,
     cityName: "San Francisco",
     state: "California",
@@ -52,7 +42,7 @@ export class WeatherComponent implements OnInit {
     currentWeather: "weather",
     summary: "summary for city"
   }
-  event5 = {
+  data5 = {
     id: 5,
     cityName: "Austin",
     state: "Texas",
