@@ -21,45 +21,45 @@ export class WeatherComponent implements OnInit {
     cityName: "Detroit",
     state: "Michigan",
     stateAB: "MI",
-    weatherIcon: "sample",
+    weatherIcon: "placeholder for icon",
     currentWeather: "weather",
-    summary: "Placeholder text"
+    summary: "summary for city"
   }
   event2 = {
     id: 2,
     cityName: "New York City",
     state: "New York",
     stateAB: "NY",
-    weatherIcon: "sample",
+    weatherIcon: "placeholder for icon",
     currentWeather: "weather",
-    summary: "Placeholder text"
+    summary: "summary for city"
   }
   event3 = {
     id: 3,
     cityName: "Chicago",
     state: "Illinois",
     stateAB: "IL",
-    weatherIcon: "sample",
+    weatherIcon: "placeholder for icon",
     currentWeather: "weather",
-    summary: "Placeholder text"
+    summary: "summary for city"
   }
   event4 = {
     id: 4,
     cityName: "San Francisco",
     state: "California",
     stateAB: "CA",
-    weatherIcon: "sample",
+    weatherIcon: "placeholder for icon",
     currentWeather: "weather",
-    summary: "Placeholder text"
+    summary: "summary for city"
   }
   event5 = {
     id: 5,
     cityName: "Austin",
     state: "Texas",
     stateAB: "TX",
-    weatherIcon: "sample",
+    weatherIcon: "placeholder for icon",
     currentWeather: "weather",
-    summary: "Placeholder text"
+    summary: "summary for city"
   }
   constructor() { }
 
