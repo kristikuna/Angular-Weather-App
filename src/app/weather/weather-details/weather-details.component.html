@@ -1,9 +1,5 @@
 <div class="container">
-  <div>
-      <router-outlet></router-outlet>
-      <h2>{{city?.name}}</h2>
-  </div>
-
+  <h2>{{city?.name}}</h2>
   <div class="five-day-forecast">
     <ul class="forecast">
       <li>Day 1</li>
@@ -50,5 +46,8 @@
       </li>
       <li>{{city?.weather?.description}}</li>
     </ul>
+  </div>
+  <div class="home-btn">
+    <button routerLink="/weather" class="btn btn-outline-dark">Home</button>
   </div>
 </div>

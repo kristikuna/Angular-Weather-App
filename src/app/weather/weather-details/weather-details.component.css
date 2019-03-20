@@ -2,9 +2,21 @@ h2{
 	text-align: center;
 }
 
+.home-btn{
+	display: flex;
+	justify-content: center;
+}
+button{
+	border-radius: 10px;
+}
+
+.five-day-forecast{
+	margin: 2% 0;
+}
 ul{
 	list-style: none;
 }
+
 .forecast {
 	background: #4EA478;
 	border-radius: 15px;
@@ -24,6 +36,7 @@ ul{
 li.icon{
 	height: 35%;
 }
+
 @media (min-width:801px)  {
 	.five-day-forecast{
 		display: flex;
