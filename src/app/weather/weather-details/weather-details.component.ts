@@ -3,7 +3,8 @@ import { CityService } from '../shared/city.service';
 import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'tv-weather-details',
-  templateUrl: './weather-details.component.html'
+  templateUrl: './weather-details.component.html',
+  styleUrls: ['./weather-details.component.css']
 })
 
 export class WeatherDetailsComponent {

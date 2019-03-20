@@ -1,25 +1,54 @@
-<div>
-    
-  
-    <div class="row">
-      <div class="col-md-11">
-          <router-outlet></router-outlet>
-        <h2>{{city?.name}} </h2>
-      </div>
-    </div>
-  
-    <div class="row">
-      <div class="col-md-6">
-        <div><strong>Weather:</strong> {{city?.weather?.description}}</div>
-        <div><strong>main:</strong> {{city?.main?.temp}}</div>
-        
-      </div>
-      <div class="col-md-6">
-        <address>
-          <strong>coord:</strong><br />
-          {{city?.coord?.lon}}<br />
-          {{city?.coord?.lat}}
-        </address>
-      </div>
-    </div>
+<div class="container">
+  <div>
+      <router-outlet></router-outlet>
+      <h2>{{city?.name}}</h2>
   </div>
+
+  <div class="five-day-forecast">
+    <ul class="forecast">
+      <li>Day 1</li>
+      <li class="icon">ICON</li>
+      <li>
+        {{city?.main?.temp  | fahrenheitConverter}}&#176;F /
+        {{city?.main?.temp | celsiusConverter}}&#176;C
+      </li>
+      <li>{{city?.weather?.description}}</li>
+    </ul>
+    <ul class="forecast">
+      <li>Day 2</li>
+      <li class="icon">ICON</li>
+      <li>
+        {{city?.main?.temp  | fahrenheitConverter}}&#176;F /
+        {{city?.main?.temp | celsiusConverter}}&#176;C
+      </li>
+      <li>{{city?.weather?.description}}</li>
+    </ul>
+    <ul class="forecast">
+      <li>Day 3</li>
+      <li class="icon">ICON</li>
+      <li>
+        {{city?.main?.temp  | fahrenheitConverter}}&#176;F /
+        {{city?.main?.temp | celsiusConverter}}&#176;C
+      </li>
+      <li>{{city?.weather?.description}}</li>
+    </ul>
+    <ul class="forecast">
+      <li>Day 4</li>
+      <li class="icon">ICON</li>
+      <li>
+        {{city?.main?.temp  | fahrenheitConverter}}&#176;F /
+        {{city?.main?.temp | celsiusConverter}}&#176;C
+      </li>
+      <li>{{city?.weather?.description}}</li>
+    </ul>
+    <ul class="forecast">
+      <li>Day 5</li>
+      <li class="icon">ICON</li>
+      <li>
+        {{city?.main?.temp  | fahrenheitConverter}}&#176;F /
+        {{city?.main?.temp | celsiusConverter}}&#176;C
+      </li>
+      <li>{{city?.weather?.description}}</li>
+    </ul>
+  </div>
+</div>

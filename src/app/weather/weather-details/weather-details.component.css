@@ -1,0 +1,35 @@
+h2{
+	text-align: center;
+}
+
+ul{
+	list-style: none;
+}
+.forecast {
+	background: #4EA478;
+	border-radius: 15px;
+	height: 10rem;
+	margin: 8px;
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	padding: 5px;
+}
+
+.forecast li:first-of-type{
+	font-size: 30px;
+	border-bottom: 1px solid white;
+}
+
+li.icon{
+	height: 35%;
+}
+@media (min-width:801px)  {
+	.five-day-forecast{
+		display: flex;
+		width: 100%;
+	}
+	.forecast{
+		width: 20%;
+	}
+}
