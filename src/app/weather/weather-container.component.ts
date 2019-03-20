@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CityService } from './shared/city.service';
 import { ActivatedRoute } from '@angular/router';
 @Component({
+  selector: 'tv-weather-container',
   templateUrl: './weather-container.component.html',
   styleUrls: ['./weather-container.component.css']
 })

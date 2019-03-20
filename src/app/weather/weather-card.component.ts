@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'weather-card',
+  selector: 'tv-weather-card',
   template: `
    <div class="card">
     <div class="card-header">
