@@ -8,6 +8,8 @@ import { WeatherContainer } from './weather/weather-container.component';
 import { WeatherCardComponent } from './weather/weather-card.component';
 import { WeatherDetailsComponent } from './weather/weather-details/weather-details.component';
 import { CityService } from './weather/shared/city.service';
+import { FahrenheitConverter } from './weather/shared/fahrenheitConverter.pipe';
+import { CelsiusConverter } from './weather/shared/celsiusConverter.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { CityService } from './weather/shared/city.service';
     NavBarComponent,
     WeatherContainer,
     WeatherCardComponent,
-    WeatherDetailsComponent
+    WeatherDetailsComponent,
+    FahrenheitConverter,
+    CelsiusConverter
   ],
   imports: [
     BrowserModule,
