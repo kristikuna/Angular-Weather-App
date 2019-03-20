@@ -13,8 +13,7 @@ const CITIES = [
     coord: { "lon": 1, "lat": 35 },
     name: "Shuzenji",
     weather: {
-      description: "overcast clouds",
-      icon: "placeholder for icon"
+      description: "overcast clouds"
     },
     main: {
       temp: 285.514,
@@ -26,8 +25,7 @@ const CITIES = [
     coord: { "lon": 2, "lat": 35 },
     name: "Chicago",
     weather: {
-      description: "sunny",
-      icon: "placeholder for icon"
+      description: "sunny"
     },
     main: {
       temp: 285.514,
@@ -39,12 +37,10 @@ const CITIES = [
     coord: { "lon": 3, "lat": 35 },
     name: "Detroit",
     weather: {
-      description: "snow",
-      icon: "placeholder for icon"
+      description: "snow"
     },
     main: {
       temp: 285.514,
-      humidity: 100
     }
   },
   {
@@ -52,12 +48,10 @@ const CITIES = [
     coord: { "lon": 4, "lat": 35 },
     name: "Miami",
     weather: {
-      description: "rainy",
-      icon: "placeholder for icon"
+      description: "rainy"
     },
     main: {
       temp: 285.514,
-      humidity: 100
     }
   },
   {
@@ -65,12 +59,10 @@ const CITIES = [
     coord: { "lon": 5, "lat": 35 },
     name: "San Franciso",
     weather: {
-      description: "partly cloudy",
-      icon: "placeholder for icon"
+      description: "partly cloudy"
     },
     main: {
       temp: 285.514,
-      humidity: 100
     }
   }
 ]
