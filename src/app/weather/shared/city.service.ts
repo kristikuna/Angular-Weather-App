@@ -5,6 +5,10 @@ export class CityService {
   getCities() {
     return CITIES
   }
+    
+    getCity(id:number){
+      return CITIES.find( city => city.id === id)
+    }
 }
 
 const CITIES = [

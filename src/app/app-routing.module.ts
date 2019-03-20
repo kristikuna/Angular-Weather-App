@@ -5,8 +5,9 @@ import { WeatherDetailsComponent } from './weather/weather-details/weather-detai
 
 const routes: Routes = [
   { path: 'weather', component: WeatherComponent },
-  { path: '', redirectTo: '/weather', pathMatch: 'full' },
-  { path: 'weather/:id', component: WeatherDetailsComponent }
+  { path: 'weather/:id', component: WeatherDetailsComponent },
+  { path: '', redirectTo: '/weather', pathMatch: 'full' }
+
 ];
 
 @NgModule({
