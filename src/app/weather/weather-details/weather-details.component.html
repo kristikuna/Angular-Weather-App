@@ -1,1 +1,25 @@
-<h1>hey</h1>
+<div>
+    
+  
+    <div class="row">
+      <div class="col-md-11">
+          <router-outlet></router-outlet>
+        <h2>{{city?.name}} </h2>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <div><strong>Weather:</strong> {{city?.weather?.description}}</div>
+        <div><strong>main:</strong> {{city?.main?.temp}}</div>
+        
+      </div>
+      <div class="col-md-6">
+        <address>
+          <strong>coord:</strong><br />
+          {{city?.coord?.lon}}<br />
+          {{city?.coord?.lat}}
+        </address>
+      </div>
+    </div>
+  </div>
