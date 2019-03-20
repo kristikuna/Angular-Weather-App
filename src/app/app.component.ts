@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'tv-root',
   template: `
-    <app-nav-bar></app-nav-bar>
-    <app-weather></app-weather>`,
+    <tv-nav-bar></tv-nav-bar>
+    <router-outlet></router-outlet>
+    `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
