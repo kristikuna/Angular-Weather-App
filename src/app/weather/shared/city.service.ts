@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { Subject, Observable } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 @Injectable()
 export class CityService {
   appId = '3fdd61069038068563e3c1e8e742b329';
@@ -8,13 +8,22 @@ export class CityService {
 
   constructor(private http: HttpClient) { }
 
-  getCurrentTemp(CITIES) {
-    this.http.get(this.baseUrl).subscribe((res) => {
-      let CITIES = res;
-      console.log(CITIES);
-    });
+  // getCurrentTemp(CITIES) {
+  //   this.http.get(this.baseUrl).subscribe((res) => {
+  //     let CITIES = res;
+  //     console.log(CITIES);
+  //   });
+  // }
+  getCurrentTemp(id: number, metric: 'metric' | 'imperial' = 'metric'): Subject<number> {
+    const dataSubject = new Subject<number>();
+    this.http.get(
+      `https://api.openweathermap.org/data/2.5/weather?id=707860&units=${metric}&APPID=3fdd61069038068563e3c1e8e742b329`)
+      .subscribe((weather: any) => {
+        dataSubject.next(Math.round(Number(weather.main.temp)));
+      });
+    console.log("CHECK ME OUT")
+    return dataSubject;
   }
-
   getCities() {
     return CITIES;
   }

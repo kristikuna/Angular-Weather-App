@@ -15,7 +15,7 @@ export class WeatherContainer implements OnInit {
 
   ngOnInit() {
     this.cities = this.cityService.getCities();
-    this.temp = this.cityService.getCurrentTemp();
+    // this.temp = this.cityService.getCurrentTemp();
   }
 
 }
