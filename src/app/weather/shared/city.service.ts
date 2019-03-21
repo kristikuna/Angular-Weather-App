@@ -1,26 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Subject } from 'rxjs';
+// import { Subject, Observable } from 'rxjs';
 @Injectable()
 export class CityService {
+  cityId = 707860;
+  appId = '3fdd61069038068563e3c1e8e742b329';
+  baseUrl: string = `https://api.openweathermap.org/data/2.5/weather?id=${this.cityId}&APPID=${this.appId}`;
+
   constructor(private http: HttpClient) { }
 
-   getCurrentTemp(id: number, metric: 'metric' | 'imperial' = 'metric'): Subject<number> {
-    const dataSubject = new Subject<number>();
-    this.http.get(
-      `https://api.openweathermap.org/data/2.5/weather?id=707860&units=${metric}&APPID=3fdd61069038068563e3c1e8e742b329`)
-      .subscribe((weather: any) => {
-        dataSubject.next(Math.round(Number(weather.main.temp)));
-      });
-      console.log("CHECK ME OUT")
-      return dataSubject;
+  getCurrentTemp(cityIdArr, CITIES) {
+    cityIdArr =[707860, 12345];
+
+    // cityIdArr.forEach(function(element){
+    //   console.log(element);
+    // });
+    this.http.get(this.baseUrl).subscribe((res) => {
+      let CITIES = res;
+      console.log(CITIES);
+    });
   }
+
   getCities() {
-    return CITIES
+    return CITIES;
   }
-  getCity(id:number){
-      return CITIES.find( city => city.id === id)
-    }
+
+  getCity(id: number) {
+    return CITIES.find(city => city.id === id)
+  }
 }
 
 const CITIES = [

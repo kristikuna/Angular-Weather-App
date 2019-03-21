@@ -16,6 +16,6 @@ export class WeatherDetailsComponent {
   }
   ngOnInit() {
     this.city = this.cityService.getCity(+this.route.snapshot.params['id'])
-    this.temp = this.cityService.getCurrentTemp(+this.route.snapshot.params['id'])
+    this.temp = this.cityService.getCurrentTemp();
   }
 }
