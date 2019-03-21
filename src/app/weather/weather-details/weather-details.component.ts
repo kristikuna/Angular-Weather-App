@@ -9,13 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 
 export class WeatherDetailsComponent {
   city: any
-  temp: any
   constructor(private cityService: CityService, private route: ActivatedRoute) {
 
 
   }
   ngOnInit() {
     this.city = this.cityService.getCity(+this.route.snapshot.params['id'])
-    this.temp = this.cityService.getCurrentTemp();
   }
 }

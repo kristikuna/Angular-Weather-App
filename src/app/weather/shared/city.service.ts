@@ -3,18 +3,12 @@ import { HttpClient } from '@angular/common/http';
 // import { Subject, Observable } from 'rxjs';
 @Injectable()
 export class CityService {
-  cityId = 707860;
   appId = '3fdd61069038068563e3c1e8e742b329';
-  baseUrl: string = `https://api.openweathermap.org/data/2.5/weather?id=${this.cityId}&APPID=${this.appId}`;
+  baseUrl: string = `https://api.openweathermap.org/data/2.5/group?id=707860,524901&APPID=${this.appId}`;
 
   constructor(private http: HttpClient) { }
 
-  getCurrentTemp(cityIdArr, CITIES) {
-    cityIdArr =[707860, 12345];
-
-    // cityIdArr.forEach(function(element){
-    //   console.log(element);
-    // });
+  getCurrentTemp(CITIES) {
     this.http.get(this.baseUrl).subscribe((res) => {
       let CITIES = res;
       console.log(CITIES);
