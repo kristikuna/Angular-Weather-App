@@ -1,12 +1,24 @@
-import { Injectable } from '@angular/core'
-
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Subject } from 'rxjs';
 @Injectable()
 export class CityService {
+  constructor(private http: HttpClient) { }
+
+   getCurrentTemp(id: number, metric: 'metric' | 'imperial' = 'metric'): Subject<number> {
+    const dataSubject = new Subject<number>();
+    this.http.get(
+      `https://api.openweathermap.org/data/2.5/weather?id=707860&units=${metric}&APPID=3fdd61069038068563e3c1e8e742b329`)
+      .subscribe((weather: any) => {
+        dataSubject.next(Math.round(Number(weather.main.temp)));
+      });
+      console.log("CHECK ME OUT")
+      return dataSubject;
+  }
   getCities() {
     return CITIES
   }
-    
-    getCity(id:number){
+  getCity(id:number){
       return CITIES.find( city => city.id === id)
     }
 }
