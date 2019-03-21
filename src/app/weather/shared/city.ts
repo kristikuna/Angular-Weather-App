@@ -1,4 +1,6 @@
-export class City {
-  id: number;
-  name: string;
+export interface City {
+  id?: number;
+  name?: string;
+  weather?: {};
+  main?: {};
 }

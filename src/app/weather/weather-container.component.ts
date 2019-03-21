@@ -11,7 +11,6 @@ import { City } from './shared/city';
 export class WeatherContainer implements OnInit {
   cities: City[]
   constructor(private cityService: CityService) {
-
   }
 
   ngOnInit() {
@@ -20,8 +19,7 @@ export class WeatherContainer implements OnInit {
   }
 
   getCities(): void {
-    this.cityService.getCities();
-    .subscribe(cities => this.cities = cities);
+    this.cityService.getCities().subscribe(cities => this.cities = cities);
   }
 }
 
