@@ -1,27 +1,38 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { Subject, Observable } from 'rxjs';
+import {  Observable } from 'rxjs';
+
 @Injectable()
 export class CityService {
-  appId = '3fdd61069038068563e3c1e8e742b329';
-  baseUrl: string = `https://api.openweathermap.org/data/2.5/group?id=707860,524901&APPID=${this.appId}`;
+  appId:string = '3fdd61069038068563e3c1e8e742b329';
+  baseUrl:string = `https://api.openweathermap.org/data/2.5/group?id=707860,524901&APPID=${this.appId}`;
 
-  constructor(private http: HttpClient) { }
+  constructor(public http: HttpClient) { }
 
-  getCurrentTemp(CITIES) {
-    this.http.get(this.baseUrl).subscribe((res) => {
-      let CITIES = res;
-      console.log(CITIES);
-    });
-  }
+  // getCurrentTemp(data) {
+  //   this.http.get(this.baseUrl).subscribe((res) => {
+  //     let data = res;
+  //     console.log(data.list[0].name);
+  //  });
+  // }
 
-  getCities() {
-    return CITIES;
+  // getCities(...cityCodes):Observable<any[]> {
+  getCities():Observable<Any[]> {
+    //array.join to create string of coma sep values and use to append url
+    return this.http.get<Any[]>(this.baseUrl)
+      .pipe(
+        catchError(this.handleError<Any[]>('getCities', []))
+    );
+
+    // this.http.get(this.baseUrl).subscribe((res) => {
+    //   let data = res;
+     
+   });
   }
 
   getCity(id: number) {
     return CITIES.find(city => city.id === id)
-  }
+  } 
 }
 
 const CITIES = [

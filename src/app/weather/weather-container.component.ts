@@ -8,15 +8,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class WeatherContainer implements OnInit {
   cities: any[]
-  temp: any
   constructor(private cityService: CityService) {
 
   }
 
   ngOnInit() {
+    //pass array of city codes
     this.cities = this.cityService.getCities();
-    this.temp = this.cityService.getCurrentTemp();
   }
-
 }
 
