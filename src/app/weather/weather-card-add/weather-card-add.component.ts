@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
+// tslint:disable-next-line: whitespace
 @Component({
   selector: 'tv-weather-card-add',
   templateUrl: './weather-card-add.component.html',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
 })
 
 export class WeatherCardAddComponent {
-
+  @Input() data: any
 }

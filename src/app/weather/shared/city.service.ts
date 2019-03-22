@@ -33,6 +33,9 @@ export class CityService {
 
   getForecast(id: number): Observable<Forecast> {
     return this.http.get<Forecast>(`api.openweathermap.org/data/2.5/forecast?id=524901` + id + `&APPID=3fdd61069038068563e3c1e8e742b329`)
+      .pipe(tap(x => {
+        console.log(x + "service");
+      }))
       .pipe(catchError(this.handleError<Forecast>('getForecast')));
   }
 

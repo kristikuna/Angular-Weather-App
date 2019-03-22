@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ɵConsole } from '@angular/core';
 import { CityService } from '../shared/city.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { City } from '../shared/city';
@@ -22,8 +22,18 @@ export class WeatherDetailsComponent {
         this.city = city;
         this.forecastId = city.id;
         console.log(this.forecastId);
+        this.getForecast();
       });
     });
+
+    // if (this.route.params.value['id']) {
+    //   this.cityService.getCity(this.route.params.value['id']).subscribe((city: City) => {
+    //     this.city = city;
+    //     this.forecastId = city.id;
+    //     console.log(this.forecastId);
+    //     this.getForecast();
+    //   });
+    // }
   }
   getForecast(): void {
     this.cityService.getForecast(this.forecastId).subscribe(forecast => {

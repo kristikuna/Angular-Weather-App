@@ -1,18 +1,17 @@
-<form class = "formText">
+<div class="container">
+  <button id="btn-home" routerLink="/weather" class="btn btn-outline-dark ">Home</button>
+
+  <form class="formText">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <h1>Fill in the Location Details Below:</h1>
-  <div class = "col-md-6">
-  <input type="text" placeholder = "City Name " required>
-  </div>
- <div class = "col-md-6">
- <input  type="text" placeholder="State" required>
- </div>
- <div class = "col-md-6">
-<input type="text" placeholder = "Zip Code " required>
+    <h1>Fill in the Location Details Below:</h1>
+    <div class="col-md-6">
+      <input type="text" placeholder="City Name " required>
+    </div>
+
+    <div class="col-md-6">
+      <button class="button  btn-primary" type="search" routerLink="/weather/{{city.id}}">Search
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </form>
 </div>
-<div class = "col-md-6">
-<button class = "btn btn-lg btn-primary"  type="submit">Save
-<i class="fa fa-check-square-o"></i>
-</button>
-</div>
-</form>
