@@ -16,10 +16,16 @@ export class WeatherContainer implements OnInit {
   ngOnInit() {
     //pass array of city codes
     this.getCities();
+
+    // this.cities = this.cityService.getCities();
+    // this.temp = this.cityService.getCurrentTemp();
   }
 
   getCities(): void {
-    this.cityService.getCities().subscribe(cities => this.cities = cities);
+    this.cityService.getCities().subscribe(cities => {
+      this.cities = cities;
+      console.log(cities);
+    });
   }
 }
 
