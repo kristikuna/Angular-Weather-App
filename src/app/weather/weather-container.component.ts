@@ -10,6 +10,7 @@ import { City } from './shared/city';
 })
 export class WeatherContainer implements OnInit {
   cities: City[]
+  // newArr: City[]
   constructor(private cityService: CityService) {
   }
 
@@ -25,6 +26,9 @@ export class WeatherContainer implements OnInit {
     this.cityService.getCities().subscribe(cities => {
       this.cities = cities;
       console.log(cities);
+      // this.newArr = [];
+      // this.newArr.push(this.cities);
+      // console.log(this.newArr);
     });
   }
 }
