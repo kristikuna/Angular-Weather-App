@@ -18,9 +18,9 @@ export class WeatherContainer implements OnInit {
   }
 
   getCities(): void {
-    this.cityService.getCities().subscribe(cities => { 
-      this.cities = cities; 
-      console.log(cities);
+    this.cityService.getCities().subscribe(cities => {
+      this.cities = cities;
+      // console.log(this.cities.list[0].id);
     });
   }
 }

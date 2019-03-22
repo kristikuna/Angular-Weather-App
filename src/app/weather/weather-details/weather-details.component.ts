@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CityService } from '../shared/city.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
+import { City } from '../shared/city';
 @Component({
   selector: 'tv-weather-details',
   templateUrl: './weather-details.component.html',
@@ -8,10 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class WeatherDetailsComponent {
-  city: any;
+  city: City;
+
   constructor(private cityService: CityService, private route: ActivatedRoute) {
   }
   ngOnInit() {
-    this.city = this.cityService.getCity(+this.route.snapshot.params['id']);
+    this.route.params.forEach((params: Params) => {
+      this.cityService.getCity(+params['id']).subscribe((city: City) => {
+        this.city = city;
+      });
+    });
   }
 }
