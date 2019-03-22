@@ -6,12 +6,82 @@
     <br />{{data.main.temp | fahrenheitConverter}}&#176;F
     <br />{{data.main.temp | celsiusConverter}}&#176;C
     <br />{{data.weather[0].description}}
-    <div [ngSwitch]="data.weather.description">
-      <img *ngSwitchCase="'overcast clouds'" src="assets/cloudy.png" alt="">
-      <img *ngSwitchCase="'sunny'" src="assets/sunny.png" alt="">
-      <img *ngSwitchCase="'snow'" src="assets/snow.png" alt="">
-      <img *ngSwitchCase="'rainy'" src="assets/rain.png" alt="">
-      <img *ngSwitchCase="'partly cloudy'" src="assets/partly_cloudy.png" alt="">
+    <div [ngSwitch]="data.weather[0].description">
+    <!--Thunderstorm Cases-->
+    <img *ngSwitchCase="'thunderstorm with light rain'" src="assets/11d.png" alt="">
+    <img *ngSwitchCase="'thunderstorm with rain'" src="assets/11d.png" alt="">
+    <img *ngSwitchCase="'thunderstorm with heavy rain'" src="assets/11d.png" alt="">
+    <img *ngSwitchCase="'light thunderstorm'" src="assets/11d.png" alt="">
+    <img *ngSwitchCase="'thunderstorm'" src="assets/11d.png" alt="">
+    <img *ngSwitchCase="'heavy thunderstorm'" src="assets/11d.png" alt="">
+    <img *ngSwitchCase="'ragged thunderstorm'" src="assets/11d.png" alt="">
+    <img *ngSwitchCase="'thunderstorm with light drizzle'" src="assets/11d.png" alt="">
+    <img *ngSwitchCase="'thunderstorm with drizzle'" src="assets/11d.png" alt="">
+    <img *ngSwitchCase="'thunderstorm with heavy drizzle'" src="assets/11d.png" alt="">
+    <!--End Thunderstorm Cases-->
+
+    <!--Drizzle Cases-->
+    <img *ngSwitchCase="'light intensity drizzle'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'drizzle'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'heavy intensity drizzle'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'light intensity drizzle rain'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'drizzle rain'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'heavy intensity drizzle rain'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'shower rain and drizzle'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'heavy shower rain and drizzle'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'shower drizzle'" src="assets/09d.png" alt="">
+    <!--End Drizzle Cases-->
+
+    <!--Rain Cases-->
+    <img *ngSwitchCase="'light rain'" src="assets/10d.png" alt="">
+    <img *ngSwitchCase="'moderate rain'" src="assets/10d.png" alt="">
+    <img *ngSwitchCase="'heavy intensity rain'" src="assets/10d.png" alt="">
+    <img *ngSwitchCase="'very heavy rain'" src="assets/10d.png" alt="">
+    <img *ngSwitchCase="'extreme rain'" src="assets/10d.png" alt="">
+    <img *ngSwitchCase="'freezing rain'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'light intensity shower rain'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'shower rain'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'heavy intensity shower rain'" src="assets/09d.png" alt="">
+    <img *ngSwitchCase="'ragged shower rain'" src="assets/09d.png" alt="">
+    <!--End Rain Cases-->
+
+    <!--Snow Cases-->
+    <img *ngSwitchCase="'light snow'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'snow'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'heavy snow'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'sleet'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'light shower sleet'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'shower sleet'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'light rain and snow'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'rain and snow'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'light shower snow'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'shower snow'" src="assets/13d.png" alt="">
+    <img *ngSwitchCase="'heavy shower snow'" src="assets/13d.png" alt="">
+    <!--End Snow Cases-->
+
+    <!--Atmosphere Cases-->
+    <img *ngSwitchCase="'mist'" src="assets/50d.png" alt="">
+    <img *ngSwitchCase="'Smoke'" src="assets/50d.png" alt="">
+    <img *ngSwitchCase="'Haze'" src="assets/50d.png" alt="">
+    <img *ngSwitchCase="'sand/ dust whirls'" src="assets/50d.png" alt="">
+    <img *ngSwitchCase="'fog'" src="assets/50d.png" alt="">
+    <img *ngSwitchCase="'sand'" src="assets/50d.png" alt="">
+    <img *ngSwitchCase="'dust'" src="assets/50d.png" alt="">
+    <img *ngSwitchCase="'volcanic ash'" src="assets/50d.png" alt="">
+    <img *ngSwitchCase="'squalls'" src="assets/50d.png" alt="">
+    <img *ngSwitchCase="'tornado'" src="assets/50d.png" alt="">
+    <!--End Atmosphere Cases-->
+
+    <!--Clear Sky Cases-->
+    <img *ngSwitchCase="'clear sky'" src="assets/01d.png" alt="">
+    <!--End Clear Sky Cases-->
+
+    <!--Cloud Cases-->
+    <img *ngSwitchCase="'few clouds'" src="assets/02d.png" alt="">
+    <img *ngSwitchCase="'scattered clouds'" src="assets/03d.png" alt="">
+    <img *ngSwitchCase="'broken clouds'" src="assets/04d.png" alt="">
+    <img *ngSwitchCase="'overcast clouds'" src="assets/04d.png" alt="">
+    <!--End Cloud Cases-->
     </div>
   </div>
 </div>
