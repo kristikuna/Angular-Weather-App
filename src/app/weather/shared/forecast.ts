@@ -1,7 +1,7 @@
-export interface City {
+export interface Forecast {
   list: [];
-  id: number;
   name: string;
+  id: number;
   weather: [];
   main: {
     temp: number;

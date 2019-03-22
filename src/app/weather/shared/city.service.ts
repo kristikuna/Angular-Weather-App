@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { City } from './city';
+import { Forecast } from './forecast';
 import { catchError, tap, map } from 'rxjs/operators';
 
 
@@ -28,6 +29,11 @@ export class CityService {
   getCity(id: number): Observable<City> {
     return this.http.get<City>(`https://api.openweathermap.org/data/2.5/weather?id=` + id + `&APPID=3fdd61069038068563e3c1e8e742b329`)
       .pipe(catchError(this.handleError<City>('getCity')));
+  }
+
+  getForecast(id: number): Observable<Forecast> {
+    return this.http.get<Forecast>(`api.openweathermap.org/data/2.5/forecast?id=524901` + id + `&APPID=3fdd61069038068563e3c1e8e742b329`)
+      .pipe(catchError(this.handleError<Forecast>('getForecast')));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
