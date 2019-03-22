@@ -2,32 +2,34 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { City } from './city';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, tap, map} from 'rxjs/operators';
 
 
 @Injectable()
 export class CityService {
+  cityCodes: any = [
+    2172797,
+    519188,
+    4990729,
+    4924095,
+    3012874
+  ];
+  
   appId: string = '3fdd61069038068563e3c1e8e742b329';
-  baseUrl: string = `https://api.openweathermap.org/data/2.5/group?id=2172797&APPID=`;
+  baseUrl: string = `https://api.openweathermap.org/data/2.5/group?id=${this.cityCodes.join()}&APPID=`;
 
-  cityCodes = [
-    2172797,
-    2172797,
-    2172797
-  ]
 
   constructor(public http: HttpClient) { }
-
-  getCities(...cityCodes): Observable<City[]> {
-    console.log('hey' + cityCodes + "BYE");
-    //array.join to create string of coma sep values and use to append url
+  getCities(): Observable<City[]> {
     return this.http.get<City[]>(this.baseUrl + this.appId)
       .pipe(catchError(this.handleError<City[]>('getCities', [])))
-  };
-
-  getCity(id: number) {
-    return CITIES.find(city => city.id === id)
   }
+
+  getCity(id: number): Observable<City> {
+    return this.http.get<City>(this.baseUrl + this.appId)
+      .pipe(catchError(this.handleError<City>('getCity')))
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);

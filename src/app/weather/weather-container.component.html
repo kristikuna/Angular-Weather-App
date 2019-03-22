@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row">
-    <tv-weather-card *ngFor="let city of cities" [data]="city" class="col-lg-3 col-md-4 col-sm-12"
+  <div class="row" *ngIf="cities">
+    <tv-weather-card *ngFor="let city of cities.list" [data]="city" class="col-lg-3 col-md-4 col-sm-12"
       routerLink="/weather/{{city.id}}">
     </tv-weather-card>
   </div>

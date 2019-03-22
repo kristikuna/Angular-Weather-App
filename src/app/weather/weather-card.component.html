@@ -5,7 +5,7 @@
   <div class="card-content">
     <br />{{data.main.temp | fahrenheitConverter}}&#176;F
     <br />{{data.main.temp | celsiusConverter}}&#176;C
-    <br />{{data.weather.description}}
+    <br />{{data.weather[0].description}}
     <div [ngSwitch]="data.weather.description">
       <img *ngSwitchCase="'overcast clouds'" src="assets/cloudy.png" alt="">
       <img *ngSwitchCase="'sunny'" src="assets/sunny.png" alt="">

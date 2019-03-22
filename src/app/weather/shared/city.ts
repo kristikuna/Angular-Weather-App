@@ -1,6 +1,6 @@
 export interface City {
-  id?: number;
-  name?: string;
-  weather?: {};
-  main?: {};
+  id: number;
+  name: string;
+  weather: [];
+  main: {};
 }
